@@ -19,8 +19,11 @@ h1 {
    the dropdown from the page content. */
 @media (max-width: 767px) {
 
+  /* margin: 0 -15px cancels the .container-fluid side padding, so the
+     dropdown spans the ENTIRE browser window width (Bootstrap's own
+     navbar-nav uses the same -15px bleed). */
   .navbar-default .navbar-nav {
-    margin: 0;
+    margin: 0 -15px;
     background-color: #eeeeee;
   }
 
