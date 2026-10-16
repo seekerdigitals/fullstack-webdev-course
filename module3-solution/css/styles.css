@@ -1,0 +1,82 @@
+/* =====================================================================
+   Food, LLC — Module 3 assignment stylesheet
+   All custom styling lives in this file (the assignment forbids inline styles).
+   It is loaded AFTER Bootstrap, so these rules win over Bootstrap's defaults
+   when they target the same selectors.
+   ===================================================================== */
+
+/* ---- Page heading ("Our Menu") spacing ---- */
+h1 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* ---- Mobile-only dropdown menu --------------------------------------
+   The <ul class="nav navbar-nav visible-xs"> only displays on mobile
+   (xs), so these styles only ever show up on a phone-sized window.
+   margin: 0 removes Bootstrap's negative-margin gutters so the menu
+   spans the full browser width, and the gray background distinguishes
+   the dropdown from the page content. */
+@media (max-width: 767px) {
+
+  .navbar-default .navbar-nav {
+    margin: 0;
+    background-color: #eeeeee;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    background-color: #eeeeee;
+    color: #333333;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    background-color: #dddddd;
+  }
+
+  /* No border under the last item (Sushi) */
+  .navbar-default .navbar-nav > li:last-child > a {
+    border-bottom: none;
+  }
+}
+
+/* ---- Menu sections ---------------------------------------------------
+   min-height makes each section tall enough to require scrolling,
+   exactly like the mockups. display:flex + margin-top:auto on the
+   "Back to Top" link pins that link to the bottom of each section. */
+.food-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;      /* tall enough to force scrolling */
+  padding: 25px 20px 30px;
+}
+
+/* Section background colors (distinguish sections from the white page) */
+.chicken {
+  background-color: #f3e5ab;   /* soft yellow */
+}
+
+.beef {
+  background-color: #e8c39e;   /* tan */
+}
+
+.sushi {
+  background-color: #aed9e0;   /* light blue */
+}
+
+.section-text {
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* "Back to Top" jump link -> jumps back to the "Our Menu" heading (id="page-top") */
+.back-to-top {
+  display: block;
+  margin-top: auto;             /* pushes the link to the bottom of the section */
+  padding-top: 30px;
+  text-align: center;           /* centers the link inside the section */
+  font-weight: bold;
+}

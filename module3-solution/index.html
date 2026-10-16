@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food, LLC</title>
+
+  <!-- Bootstrap 3.3.7 CSS via CDN (starter files from Lecture 25, served from CDN instead of local files) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Our custom stylesheet. Loaded AFTER Bootstrap so our rules can override Bootstrap's.
+       NOTE: all styling lives in this file — no inline styles allowed. -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR =====================
+       Just a plain navbar (NOT navbar-fixed-top), so it scrolls
+       away with the page exactly like the assignment asks. -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <!-- Mobile-only hamburger button (visible-xs hides it on sm/md/desktop). -->
+        <button type="button"
+                class="navbar-toggle collapsed visible-xs"
+                data-toggle="collapse"
+                data-target="#food-menu"
+                aria-expanded="false"
+                aria-controls="food-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <!-- Company name, left-aligned (navbar-brand is left-aligned by default) -->
+        <a class="navbar-brand" href="#">Food, LLC</a>
+      </div>
+
+      <!-- Bootstrap collapse wrapper. On desktop/tablet this wrapper is visible
+           but empty-looking, because the <ul> inside is mobile-only (visible-xs),
+           so the navbar shows ONLY the brand name on larger screens. -->
+      <div class="collapse navbar-collapse" id="food-menu">
+        <ul class="nav navbar-nav visible-xs">
+          <li><a href="#chicken">Chicken</a></li>
+          <li><a href="#beef">Beef</a></li>
+          <li><a href="#sushi">Sushi</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ===================== PAGE HEADING =====================
+       text-center is the Bootstrap class that centers text. -->
+  <div class="container">
+    <h1 id="page-top" class="text-center">Our Menu</h1>
+  </div>
+
+  <!-- ===================== MENU SECTIONS =====================
+       One Bootstrap grid row containing the 3 sections.
+       The column classes control the layout at each screen size:
+         xs (mobile)     -> col-xs-12  : every section is full width, stacked
+         sm (tablet)     -> col-sm-6/12: Chicken+Beef side by side, Sushi full row below
+         md (desktop)    -> col-md-4   : all 3 sections equal width, side by side
+       The .food-section / .chicken / .beef / .sushi colors and heights
+       come from css/styles.css (no inline styles). -->
+  <div class="container-fluid">
+    <div class="row">
+
+      <div id="chicken" class="col-xs-12 col-sm-6 col-md-4 food-section chicken">
+        <h3 class="text-center">Chicken</h3>
+        <p class="section-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula
+          magna vel convallis. Aenean posuere, justo eget laoreet molestie,
+          nibh erat vulputate tortor, sed vulputate nisi lectus id dolor.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Cras euismod, urna eget tincidunt
+          ullamcorper, nisi nunc dictum lorem, vitae facilisis magna felis sed
+          justo. Donec in magna at eros posuere commodo. Suspendisse potenti.
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Integer sit amet lorem vitae nunc facilisis
+          gravida. Maecenas varius, nisl at fermentum facilisis, nisl nisl
+          aliquam nisl, vitae dictum nisl nisl eget nunc. Sed dignissim ligula
+          in nunc dictum, at facilisis arcu cursus.
+        </p>
+        <a href="#page-top" class="back-to-top">Back to Top</a>
+      </div>
+
+      <div id="beef" class="col-xs-12 col-sm-6 col-md-4 food-section beef">
+        <h3 class="text-center">Beef</h3>
+        <p class="section-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula
+          magna vel convallis. Aenean posuere, justo eget laoreet molestie,
+          nibh erat vulputate tortor, sed vulputate nisi lectus id dolor.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Cras euismod, urna eget tincidunt
+          ullamcorper, nisi nunc dictum lorem, vitae facilisis magna felis sed
+          justo. Donec in magna at eros posuere commodo. Suspendisse potenti.
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Integer sit amet lorem vitae nunc facilisis
+          gravida. Maecenas varius, nisl at fermentum facilisis, nisl nisl
+          aliquam nisl, vitae dictum nisl nisl eget nunc. Sed dignissim ligula
+          in nunc dictum, at facilisis arcu cursus.
+        </p>
+        <a href="#page-top" class="back-to-top">Back to Top</a>
+      </div>
+
+      <div id="sushi" class="col-xs-12 col-sm-12 col-md-4 food-section sushi">
+        <h3 class="text-center">Sushi</h3>
+        <p class="section-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vehicula
+          magna vel convallis. Aenean posuere, justo eget laoreet molestie,
+          nibh erat vulputate tortor, sed vulputate nisi lectus id dolor.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Cras euismod, urna eget tincidunt
+          ullamcorper, nisi nunc dictum lorem, vitae facilisis magna felis sed
+          justo. Donec in magna at eros posuere commodo. Suspendisse potenti.
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Integer sit amet lorem vitae nunc facilisis
+          gravida. Maecenas varius, nisl at fermentum facilisis, nisl nisl
+          aliquam nisl, vitae dictum nisl nisl eget nunc. Sed dignissim ligula
+          in nunc dictum, at facilisis arcu cursus.
+        </p>
+        <a href="#page-top" class="back-to-top">Back to Top</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- jQuery + Bootstrap 3 JS (needed for the navbar collapse/hamburger toggle).
+       Loaded at the end of <body>, per the Lecture 25 starter files. -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
